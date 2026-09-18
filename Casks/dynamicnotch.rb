@@ -13,11 +13,11 @@ cask "dynamicnotch" do
   end
 
   auto_updates true
-  depends_on macos: ">= :sequoia"
+  depends_on macos: :sequoia
 
   app "DynamicNotch.app"
 
-  postflight do
+  postflight_steps do
     app_path = appdir/"DynamicNotch.app"
     next unless app_path.exist?
     system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", app_path]
