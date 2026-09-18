@@ -18,9 +18,9 @@ cask "dynamicnotch" do
   app "DynamicNotch.app"
 
   postflight_steps do
-    app_path = appdir/"DynamicNotch.app"
-    next unless app_path.exist?
-    system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", app_path]
+    if_path_exists "DynamicNotch.app", base: :appdir do
+      run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "{{appdir}}/DynamicNotch.app"]
+    end
   end
 
   uninstall quit: "com.mark.dynamicnotch"
