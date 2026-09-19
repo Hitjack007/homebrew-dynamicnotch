@@ -1,8 +1,8 @@
 cask "dynamicnotch" do
-  version "27.0.2"
-  sha256 "4c3e89ac8fd3362806d2dbcbcfb5ae8ec04736066a27445c1b73e96849e73d0c"
+  version "27.1"
+  sha256 "25423511f9bd6b631b24405b16f07100dafdf233b2a27fe76690f944e0829656"
 
-  url "https://github.com/Hitjack007/DynamicNotch/releases/download/v27.0.2/DynamicNotch-27.0.2.dmg"
+  url "https://github.com/Hitjack007/DynamicNotch/releases/download/v27.1/DynamicNotch-27.1.dmg"
   name "DynamicNotch"
   desc "Turns the MacBook notch into a live system dashboard"
   homepage "https://github.com/Hitjack007/DynamicNotch"
